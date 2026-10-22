@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hallownest | Hollow Knight y Silksong</title>
+
+    <!-- Bootstrap 5: estilos -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Nuestro archivo CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img
+            src="img/Caballero del Vacío en Hallownest.png"
+            alt="Icono del Caballero"
+            class="icono-caballero"
+          />
+          <span>Hallownest</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+          aria-controls="menu"
+          aria-expanded="false"
+          aria-label="Abrir menú"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#juegos">Videojuegos</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#comparacion"> Comparación </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PORTADA PRINCIPAL -->
+    <header class="hero" id="inicio">
+      <div class="container">
+        <div class="row justify-content-end">
+          <div class="col-12 col-md-7 text-center text-md-start">
+            <h1>El mundo de<br />Hollow Knight</h1>
+
+            <p class="hero-text mt-3">
+              Explora Hallownest, descubre sus misterios
+              <br class="d-none d-md-block" />
+              y conoce la aventura de Hornet.
+            </p>
+
+            <a href="#juegos" class="btn btn-explorar mt-2">
+              Explorar juegos ↓
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN DE VIDEOJUEGOS -->
+    <main class="container py-4" id="juegos">
+      <h2 class="section-title text-center mb-3">Nuestros videojuegos</h2>
+
+      <p class="section-description text-center mb-4">
+        Dos aventuras, dos protagonistas y muchos secretos.
+      </p>
+
+      <div class="row g-4">
+        <!-- TARJETA HOLLOW KNIGHT -->
+        <div class="col-12 col-md-6">
+          <article class="card game-card">
+            <img
+              src="img/portada_hollow_kgniht.jpg"
+              class="game-image"
+              alt="Imagen de Hollow Knight"
+              loading="lazy"/>
+
+            <div class="card-body p-4">
+              <h3 class="card-title">Hollow Knight</h3>
+
+              <p class="card-text">
+                Explora el reino subterráneo de Hallownest en una aventura de
+                acción, plataformas y exploración. Controla al Caballero, lucha
+                contra enemigos y descubre los secretos de un reino olvidado.
+              </p>
+
+              <div class="mb-3">
+                <span class="badge badge-knight rounded-pill p-2">
+                  Metroidvania
+                </span>
+
+                <span class="badge badge-neutral rounded-pill p-2">
+                  Exploración
+                </span>
+              </div>
+
+              <a
+                href="https://www.hollowknight.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-more"
+              >
+                Saber más →
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- TARJETA SILKSONG -->
+        <div class="col-12 col-md-6">
+          <article class="card game-card">
+            <img
+              src="img/portada de silksong.jpg"
+              class="game-image"
+              alt="Imagen de Hollow Knight Silksong"
+              loading="lazy"
+            />
+
+            <div class="card-body p-4">
+              <h3 class="card-title">Hollow Knight: Silksong</h3>
+
+              <p class="card-text">
+                Acompaña a Hornet en su aventura por Pharloom. Utiliza su
+                agilidad, enfréntate a criaturas peligrosas y descubre un reino
+                lleno de desafíos y secretos.
+              </p>
+
+              <div class="mb-3">
+                <span class="badge badge-silksong rounded-pill p-2">
+                  Nueva aventura
+                </span>
+
+                <span class="badge badge-neutral rounded-pill p-2">
+                  Acción
+                </span>
+              </div>
+
+              <a
+                href="https://hollowknightsilksong.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-more"
+              >
+                Saber más →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <!-- TABLA COMPARATIVA -->
+    <section class="container pb-5" id="comparacion">
+      <h2 class="section-title text-center mb-4">¿En qué se diferencian?</h2>
+
+      <div class="comparison-box table-responsive">
+        <table class="table table-bordered align-middle">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th>Hollow Knight</th>
+              <th>Silksong</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th>Protagonista</th>
+              <td>El Caballero</td>
+              <td>Hornet</td>
+            </tr>
+
+            <tr>
+              <th>Reino</th>
+              <td>Hallownest</td>
+              <td>Pharloom</td>
+            </tr>
+
+            <tr>
+              <th>Estilo de juego</th>
+              <td>Exploración y combate</td>
+              <td>Agilidad y combate</td>
+            </tr>
+
+            <tr>
+              <th>Enfoque</th>
+              <td>Descubrir secretos</td>
+              <td>Explorar un nuevo reino</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="text-center py-4">
+      <div class="container">
+        <p class="mb-2"></p>
+
+        <small>
+          Hollow Knight y Silksong pertenecen a sus respectivos titulares de
+          derechos. Proyecto educativo no oficial. Team Cherry
+        </small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5: funcionalidades interactivas -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
