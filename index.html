@@ -96,7 +96,8 @@
               src="img/portada_hollow_kgniht.jpg"
               class="game-image"
               alt="Imagen de Hollow Knight"
-              loading="lazy"/>
+              loading="lazy"
+            />
 
             <div class="card-body p-4">
               <h3 class="card-title">Hollow Knight</h3>
@@ -216,16 +217,161 @@
     </section>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="text-center py-4">
-      <div class="container">
-        <p class="mb-2"></p>
+    <footer class="hk-footer" id="hkFooter">
+      <!-- Adorno superior estilo orfebrería de Hallownest -->
+      <div class="footer-divider">
+        <div class="divider-line"></div>
+        <div class="divider-icon">
+          <!-- Icono SVG de la Máscara del Caballero -->
+          <svg viewBox="0 0 100 100" width="36" height="36">
+            <path
+              fill="currentColor"
+              d="M50 8 C30 8 18 22 18 40 C18 58 28 72 40 88 C46 95 48 98 50 98 C52 98 54 95 60 88 C72 72 82 58 82 40 C82 22 70 8 50 8 Z M36 42 C30 42 26 36 26 30 C26 24 32 20 38 24 C42 28 42 38 36 42 Z M64 42 C58 38 58 28 62 24 C68 20 74 24 74 30 C74 36 70 42 64 42 Z"
+            />
+          </svg>
+        </div>
+        <div class="divider-line"></div>
+      </div>
 
-        <small>
-          Hollow Knight y Silksong pertenecen a sus respectivos titulares de
-          derechos. Proyecto educativo no oficial. Team Cherry
-        </small>
+      <div class="footer-container">
+        <!-- Columna 1: Info y Disclaimer Legal -->
+        <div class="footer-col brand-col">
+          <h3 class="col-title">HALLOWNEST & PHARLOOM</h3>
+          <p class="disclaimer-text">
+            Este es un sitio web de fans sin fines de lucro.
+            <strong>Hollow Knight</strong> y
+            <strong>Hollow Knight: Silksong</strong> son marcas registradas y
+            propiedad intelectual de <strong>Team Cherry</strong>.
+          </p>
+          <div class="grub-widget">
+            <button class="grub-btn" onclick="rescueGrub()">
+              <span class="grub-icon">🐛</span> ¡Liberar Grub del Frasco!
+            </button>
+            <span class="grub-counter" id="grubCounter"
+              >Orugas salvadas: 0</span
+            >
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación de la Web -->
+        <div class="footer-col">
+          <h4 class="col-subtitle">Explora el Reino</h4>
+          <ul class="footer-links">
+            <li><a href="#guias">Guías de Lore</a></li>
+            <li><a href="#amuletos">Colección de Amuletos</a></li>
+            <li><a href="#bestiario">Bestiario y Jefes</a></li>
+            <li><a href="#mapas">Mapas Interactivos</a></li>
+            <li><a href="#silksong">Noticias de Silksong</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Enlaces Oficiales / Tiendas -->
+        <div class="footer-col">
+          <h4 class="col-subtitle">Tiendas Oficiales</h4>
+          <ul class="footer-links">
+            <li>
+              <a
+                href="https://www.teamcherry.com.au"
+                target="_blank"
+                rel="noopener"
+                >Team Cherry Oficial ↗</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://store.steampowered.com"
+                target="_blank"
+                rel="noopener"
+                >Steam Store ↗</a
+              >
+            </li>
+            <li>
+              <a href="https://www.nintendo.com" target="_blank" rel="noopener"
+                >Nintendo eShop ↗</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://store.playstation.com"
+                target="_blank"
+                rel="noopener"
+                >PlayStation Store ↗</a
+              >
+            </li>
+            <li>
+              <a href="https://www.xbox.com" target="_blank" rel="noopener"
+                >Xbox Store ↗</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Comunidad y Redes -->
+        <div class="footer-col">
+          <h4 class="col-subtitle">Comunidad</h4>
+          <div class="social-grid">
+            <a
+              href="https://discord.gg/hollowknight"
+              class="social-card"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="social-icon">💬</span>
+              <span class="social-name">Discord</span>
+            </a>
+            <a
+              href="https://reddit.com/r/HollowKnight"
+              class="social-card"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="social-icon">🔴</span>
+              <span class="social-name">Reddit</span>
+            </a>
+            <a
+              href="https://twitter.com/teamcherrygames"
+              class="social-card"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="social-icon">🐦</span>
+              <span class="social-name">X / Twitter</span>
+            </a>
+            <a
+              href="https://hollowknight.fandom.com"
+              class="social-card"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="social-icon">📖</span>
+              <span class="social-name">Wiki</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra Inferior con Cita Icónica -->
+      <div class="footer-bottom">
+        <blockquote class="quote">
+          "No cost too great. No mind to think. No will to break."
+        </blockquote>
+        <p class="copyright">
+          © 2026 Página de Fans. Todos los derechos del juego pertenecen a Team
+          Cherry.
+        </p>
       </div>
     </footer>
+
+    <script>
+      let grubs = 0;
+      function rescueGrub() {
+        grubs++;
+        const counter = document.getElementById("grubCounter");
+        counter.innerText = `Orugas salvadas: ${grubs}`;
+        counter.style.transform = "scale(1.2)";
+        setTimeout(() => (counter.style.transform = "scale(1)"), 200);
+      }
+    </script>
 
     <!-- Bootstrap 5: funcionalidades interactivas -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
